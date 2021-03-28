@@ -50,3 +50,11 @@ At the moment this works for `roll`, `flip` and `rps` but does not work for Russ
 I plan on correcting this behaviour so that "follow-up games" work as they might in the real world (except with less lethality, obviously!)
 
 `-h` displays these commands as well, should you ever need it.
+
+## Files
+
+`generator.py` could be considered the "back-end". It is made up of the various functions of the script and essentially does most of the work. 
+
+`rollbot.py` is the "front-end" CLI, and is fairly uncomplicated. At the moment this file exists purely for the sake of testing the script. 
+
+`readme.md` is the file you are reading right now. `license.md` is the license file (GPL v3).
