@@ -62,7 +62,7 @@ def deck(x):
         elif number == 11:
             card.append("Jack")
         elif number == 12:
-            card.append("Queen")
+            card.   append("Queen")
         elif number == 13:
             card.append("King")
         else: 

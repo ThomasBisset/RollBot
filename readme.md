@@ -1,6 +1,6 @@
 # RollBot
 
-**RollBot** is a Python Script to play or enable the playing of a variety of simple games. Included are tools for dice rolling, coin flipping, playing rock-paper-scissors and of course everyone's favorite parlour game, Russian Roulette.
+**RollBot** is a Python Script to play or enable the playing of a variety of simple games. Included are tools for dice rolling, coin flipping, playing rock-paper-scissors, random card drawing and of course everyone's favorite parlour game, Russian Roulette.
 
 Originally I intended this to work as a Discord bot and while I had it working (hosted on a Raspberry Pi) I ended up doing something which broke it again, and for the life of me I can't work out what it is I did wrong! I plan on improving functionality before looking to deploy it again.
 
