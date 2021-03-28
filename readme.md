@@ -6,7 +6,7 @@ Originally I intended this to work as a Discord bot and while I had it working (
 
 ## Usage
 
-**RollBot** requires one of four arguments: `roll`, `flip`, `rps` or `rr`.
+**RollBot** requires one of five arguments: `roll`, `flip`, `rps`, `deck` or `rr`.
 
 Underneath, the script is essentially a random-number generator. The above arguments alter how the random number is interpreted and outputted to screen. 
 
@@ -25,12 +25,14 @@ For a six-sided die you would run:
     $ python3 rollbot.py roll -d 13
     [13]
 
-`flip` and `rps` should be pretty straightforward, outputting either "Heads" or "Tails" (for the former) and "Rock", "Paper" or "Scissors" (for the latter).
+`flip`, `rps` and `deck` should be pretty straightforward, outputting either "Heads" or "Tails"; "Rock", "Paper" or "Scissors"; or a card from a standard card deck:
 
     $ python3 rollbot.py flip
     ['Tails']
     $ python3 rollbot.py rps
     ['Scissors']
+    $ python3 rollbot.py deck
+    ['6 of Spades']
 
 `rr` works by picking two random integers between 1 and 6 and puts each into variables `bullet` and `chamber`. The two variables are then compared; if they match, the bullet is fired and you are "dead" - if they do not match, then you are "alive".
 
@@ -42,12 +44,17 @@ The `-x` argument can be used to do multiple rolls at once. For example, if you 
     $ python3 rollboy.py roll -x 4 -d 4
     [3, 1, 3, 2]
 
-At the moment this works for `roll`, `flip` and `rps` but does not work for Russian Roulette as intended. For example:
+At the moment this works for `roll`, `flip` and `rps` but does not work for `rr` or `deck` as intended. For example:
 
     $ python3 rollbot.py rr -x 6
     ['* click *', '* BANG! *', '* click *', '* click *', '* BANG! *', '* click *']
 
 I plan on correcting this behaviour so that "follow-up games" work as they might in the real world (except with less lethality, obviously!)
+
+For the deck of cards, the card is always the same: 
+
+    $ python3 rollbot.py deck -x 3
+    ['10 of Spades', '10 of Spades', '10 of Spades']
 
 `-h` displays these commands as well, should you ever need it.
 

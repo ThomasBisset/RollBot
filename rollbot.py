@@ -9,10 +9,10 @@
 
 import argparse
 import importlib
-from generator import roll, flip, rps, rr
+from generator import roll, flip, rps, rr, deck
 
 parser = argparse.ArgumentParser(description="RollBot | by Thomas Bisset")
-parser.add_argument("action", type=str, choices=["roll", "flip", "rps", "rr"], default="roll", help="Tells the bot whether to roll some die, flip some coins, play Rock-Paper-Scissors or Russian Roulette!")
+parser.add_argument("action", type=str, choices=["roll", "flip", "rps", "rr", "deck"], default="roll", help="Tells the bot whether to roll some die, flip some coins, draw a random card, play Rock-Paper-Scissors or Russian Roulette!")
 parser.add_argument("-d", type=int, default=20, help="Set how many sides the dice will have")
 parser.add_argument("-x", type=int, default=1, help="Set how many times the action completes")
 
@@ -26,3 +26,5 @@ elif args.action == "rps":
     print(rps(args.x))
 elif args.action =="rr":
     print(rr(args.x))
+elif args.action =="deck":
+    print(deck(args.x))
